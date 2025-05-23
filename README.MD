@@ -209,9 +209,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you encounter any issues or have questions:
 
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/news-aggregator/issues)
-- 📧 **Email**: your.email@example.com
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/news-aggregator/discussions)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/dhruvsh1997/NewsAggrigationAPP_NoSQL_Sharding/issues)
+- 📧 **Email**: dhruvsh1997@gmail.com
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/dhruvsh1997/NewsAggrigationAPP_NoSQL_Sharding/discussions)
 
 ---
 
@@ -219,6 +219,6 @@ If you encounter any issues or have questions:
 
 **⭐ If you found this project helpful, please give it a star! ⭐**
 
-Made with ❤️ by [Your Name](https://github.com/yourusername)
+Made with ❤️ by [Dhruv Sharma](https://github.com/dhruvsh1997)
 
 </div>
