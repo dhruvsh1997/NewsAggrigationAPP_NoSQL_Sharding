@@ -1,4 +1,4 @@
-name: 🐍Django News Aggregator NoSQL Sharding CI
+name: Django News Aggregator NoSQL Sharding CI
 
 on:
   push:
