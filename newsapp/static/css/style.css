@@ -1,0 +1,4 @@
+body { font-family: Arial; margin: 2em; background-color: #f4f4f4; }
+form { margin-bottom: 20px; }
+select, button { padding: 8px 12px; margin-right: 10px; }
+.article { background: white; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }

@@ -1,0 +1,6 @@
+django>=4.2
+pymongo
+requests
+celery
+rabbitmq
+python-dotenv

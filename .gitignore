@@ -1,0 +1,92 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.sqlite3
+*.log
+*.pot
+*.mo
+
+# Django
+*.db
+*.env
+.env
+local_settings.py
+db.sqlite3
+/media/
+*.secret
+
+# Environment
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Docker
+*.pid
+*.sock
+*.pid.lock
+Dockerfile~
+docker-compose.override.yml
+__pycache__/
+*.tar
+*.bak
+*.swp
+*.tmp
+
+# Celery beat
+celerybeat-schedule
+
+# Migrations (optional if you regenerate them often)
+*/migrations/*.py
+*/migrations/*.pyc
+!*/migrations/__init__.py
+
+# Logs
+logs/
+*.log
+
+# Compiled files
+*.so
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# MongoDB dump
+dump/
+
+# Node/npm (in case you use any frontend tools)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Secrets
+secrets.json

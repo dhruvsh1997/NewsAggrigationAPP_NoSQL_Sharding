@@ -1,0 +1,2 @@
+celery -A news_aggregator worker --loglevel=info
+celery -A news_aggregator worker --loglevel=info --pool=solo

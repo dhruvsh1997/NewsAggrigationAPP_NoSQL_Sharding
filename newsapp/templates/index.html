@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News Aggregator</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>News Aggregator</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="category">Select News Category:</label>
+        <select name="category" id="category">
+            {% for cat in categories %}
+                <option value="{{ cat }}" {% if selected == cat %}selected{% endif %}>{{ cat|capfirst }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Fetch News</button>
+    </form>
+
+    <h2>Top Headlines - {{ selected|capfirst }}</h2>
+    {% for article in articles %}
+        <div class="article">
+            <h3>{{ article.title }}</h3>
+            <p>{{ article.description }}</p>
+        </div>
+    {% endfor %}
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
