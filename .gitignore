@@ -22,7 +22,7 @@ db.sqlite3
 env/
 venv/
 ENV/
-env.bak/
+envNews/
 venv.bak/
 
 # VSCode
