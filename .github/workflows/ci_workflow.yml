@@ -30,10 +30,10 @@ jobs:
       - name: 📥 Checkout Repository
         uses: actions/checkout@v3
 
-      - name: 🐍 Set up Python
-        uses: actions/setup-python@v4
+      - name: 🐍 Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v3
         with:
-          python-version: 3.10
+          python-version: ${{ matrix.python-version }} #👈 If you want to use various version you want to use
 
       - name: 🗝️ Load API Key from Secrets
         run: echo "NEWS_API_KEY=${{ secrets.NEWS_API_KEY }}" >> .env
