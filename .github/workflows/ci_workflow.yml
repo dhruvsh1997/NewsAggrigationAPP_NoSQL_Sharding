@@ -1,5 +1,4 @@
-name: Django News Aggregator CI
-name: 🐍 Django CI/CD with Docker
+name: 🐍Django News Aggregator NoSQL Sharding CI
 
 on:
   push:
