@@ -54,7 +54,6 @@ jobs:
     - name: ✅ Run Django Check
       run: |
         python manage.py test
-        celery -A test worker --loglevel=info --pool=solo
 
     - name: Set up Docker Compose
       run: |
