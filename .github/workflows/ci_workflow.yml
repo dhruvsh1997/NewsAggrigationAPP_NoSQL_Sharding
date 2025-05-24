@@ -11,29 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     environment: NwzAPI
 
-    services:
-      mongo:
-        image: mongo:6
-        ports:
-          - 27017:27017
-
-      rabbitmq:
-        image: rabbitmq:3-management
-        ports:
-          - 5672:5672
-          - 15672:15672
-        env:
-          RABBITMQ_DEFAULT_USER: guest
-          RABBITMQ_DEFAULT_PASS: guest
-
     steps:
       - name: 📥 Checkout Repository
         uses: actions/checkout@v3
 
-      - name: 🐍 Set up Python ${{ matrix.python-version }}
+      - name: 🐍 Set up Python
         uses: actions/setup-python@v3
         with:
-          python-version: ${{ matrix.python-version }} #👈 If you want to use various version you want to use
+          python-version: '3.11'  # Or your version
 
       - name: 🗝️ Load API Key from Secrets
         run: echo "NEWS_API_KEY=${{ secrets.NEWS_API_KEY }}" >> .env
