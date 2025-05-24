@@ -10,8 +10,10 @@ services:
     ports:
       - "8000:8000"
     depends_on:
-      - rabbitmq
-      - mongo
+      rabbitmq:
+        condition: service_healthy
+      mongo:
+        condition: service_started
     environment:
       - PYTHONDONTWRITEBYTECODE=1
       - PYTHONUNBUFFERED=1
@@ -23,21 +25,24 @@ services:
     volumes:
       - .:/app
     depends_on:
-      - rabbitmq
-      - mongo
+      rabbitmq:
+        condition: service_healthy
+      mongo:
+        condition: service_started
 
   rabbitmq:
     image: rabbitmq:3-management
-    expose:
-      - "5673:5672"     # 👈 hostPort:containerPort
-      - "15673:15672"   # Management dashboard
-    # container_name: rabbitmq
-    # ports:
-    #   - "5672:5672"
-    #   - "15672:15672"  
+    ports:
+      - "5672:5672"
+      - "15672:15672"
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   mongo:
     image: mongo:6
